@@ -16,6 +16,7 @@ public:
     virtual QString getPluginVersion() = 0;
     virtual QString getPluginDescription() = 0;
 
+    virtual void setHashMap(const QHash<QString, QString> hashMap, QString type) = 0;
     virtual QHash<QString, QString> getHashMap(QString type) = 0;
 
     virtual std::tuple<bool, std::string> parseFile(QMap<QString, QString> &mapParseKeys,

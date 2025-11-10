@@ -27,6 +27,7 @@ public:
     QString getPluginVersion() Q_DECL_OVERRIDE;
     QString getPluginDescription() Q_DECL_OVERRIDE;
 
+    void setHashMap(const QHash<QString, QString> hashMap, QString type) Q_DECL_OVERRIDE;
     QHash<QString, QString> getHashMap(QString type) Q_DECL_OVERRIDE;
 
     std::tuple<bool, std::string> parseFile(QMap<QString, QString> &configMap,

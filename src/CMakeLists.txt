@@ -1,16 +1,16 @@
 cmake_minimum_required(VERSION 3.23)
 
 project(rz_default_metadata
-        VERSION 0.2.0
+        VERSION 0.3.0
         DESCRIPTION "Plugin to read default photo metadata keys"
-        HOMEPAGE_URL "https://github.com/Zheng-Bote/qt_metadata_desktop"
+        HOMEPAGE_URL "https://github.com/Zheng-Bote/rz_default_metadata"
         LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(PROG_EXEC_NAME "${PROJECT_NAME}")
-set(PROG_NAME "Photos to Gallery")
+set(PROG_NAME "default Metadata")
 set(PROG_VERSION "${PROJECT_VERSION}")
 set(PROG_HOMEPAGE "${PROJECT_HOMEPAGE_URL}")
 set(PROG_DESCRIPTION "${PROJECT_DESCRIPTION}")

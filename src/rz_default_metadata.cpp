@@ -37,6 +37,8 @@ QString Rz_default_metadata::getPluginDescription()
     return PLUGIN_DESCRIPTION;
 }
 
+void Rz_default_metadata::setHashMap(const QHash<QString, QString> hashMap, QString type) {}
+
 QHash<QString, QString> Rz_default_metadata::getHashMap(QString type)
 {
     if (type.contains("IPTC")) {
