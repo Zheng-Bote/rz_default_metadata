@@ -35,6 +35,9 @@ public:
     std::tuple<bool, std::string> writeFile(QMap<QString, QString> mapParseKeys,
                                             QMap<QString, QString> mapFileAttribs,
                                             QString pathToFile) Q_DECL_OVERRIDE;
+    void doClose() Q_DECL_OVERRIDE;
+
+    void closeDB();
 
 private:
     bool oknok{false};

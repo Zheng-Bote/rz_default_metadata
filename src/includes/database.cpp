@@ -20,6 +20,11 @@ std::tuple<bool, std::string> Database::openSQLiteDatabase(const QString &pathTo
 
 int Database::closeDatabase()
 {
+    {
+        QSqlDatabase db = QSqlDatabase::database();
+        db.close();
+    }
+    QSqlDatabase::removeDatabase(QSqlDatabase::defaultConnection);
     //db->close();
     return 0;
 }

@@ -1,3 +1,13 @@
+/**
+ * @file database.hpp
+ * @author your name (you@domain.com)
+ * @brief
+ * @version 0.1.0
+ * @date 2025-11-08
+ *
+ * @copyright Copyright (c) 2025 ZHENG Robert
+ *
+ */
 #pragma once
 
 #include <QSqlDatabase>

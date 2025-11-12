@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.23)
 
 project(rz_default_metadata
-        VERSION 0.3.0
+        VERSION 0.4.0
         DESCRIPTION "Plugin to read default photo metadata keys"
         HOMEPAGE_URL "https://github.com/Zheng-Bote/rz_default_metadata"
         LANGUAGES CXX)

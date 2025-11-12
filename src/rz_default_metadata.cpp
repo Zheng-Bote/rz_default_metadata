@@ -15,6 +15,7 @@ Rz_default_metadata::Rz_default_metadata(QObject *parent)
 Rz_default_metadata::~Rz_default_metadata()
 {
     //qDebug() << "Plugin DeConstructor";
+    metaDb.closeDb();
 }
 
 QString Rz_default_metadata::getPluginNameShort()
@@ -73,6 +74,16 @@ std::tuple<bool, std::string> Rz_default_metadata::writeFile(QMap<QString, QStri
                                                              QString pathToFile)
 {
     return std::make_tuple(true, "Rz_default_metadata::writeFile");
+}
+
+void Rz_default_metadata::doClose()
+{
+    closeDB();
+}
+
+void Rz_default_metadata::closeDB()
+{
+    metaDb.closeDb();
 }
 
 std::tuple<bool, std::string> Rz_default_metadata::openDefaultMetaDb(QString &pathToSQLiteDb)
