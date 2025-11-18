@@ -18,6 +18,7 @@
 #include <QSqlRecord>
 
 #include <QDebug>
+#include <exception>
 
 class Database
 {
@@ -26,6 +27,9 @@ protected:
 
     virtual int executeQuery(const QString &queryString);
     virtual int executeQueryWithFields(const QString &queryString);
+
+private:
+    QString sqlitePathToFile;
 
 public:
     virtual std::tuple<bool, std::string> openSQLiteDatabase(const QString &pathToDbFile);

@@ -9,8 +9,8 @@ std::tuple<bool, std::string> Database::openSQLiteDatabase(const QString &pathTo
 
     db = new QSqlDatabase();
     *db = QSqlDatabase::addDatabase("QSQLITE");
-
     db->setDatabaseName(pathToDbFile);
+    sqlitePathToFile = pathToDbFile;
 
     if (!db->open()) {
         return std::make_tuple(false, "Error openDatabase: " + db->lastError().text().toStdString());
@@ -20,12 +20,8 @@ std::tuple<bool, std::string> Database::openSQLiteDatabase(const QString &pathTo
 
 int Database::closeDatabase()
 {
-    {
-        QSqlDatabase db = QSqlDatabase::database();
-        db.close();
-    }
-    QSqlDatabase::removeDatabase(QSqlDatabase::defaultConnection);
-    //db->close();
+    db->removeDatabase(sqlitePathToFile);
+
     return 0;
 }
 
